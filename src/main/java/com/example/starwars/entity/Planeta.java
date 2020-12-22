@@ -1,12 +1,13 @@
 package com.example.starwars.entity;
 
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
+@Document(collation = "planetas")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
