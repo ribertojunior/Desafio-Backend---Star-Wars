@@ -5,6 +5,10 @@ public class PlanetaNotFoundException extends RuntimeException{
     super("Planeta não encontrado: " + nome);
   }
 
+  public PlanetaNotFoundException(Long id) {
+    super("Planeta não encontrado: " + id);
+  }
+
   public PlanetaNotFoundException() {
     super("Planeta não encontrado: ");
   }

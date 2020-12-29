@@ -15,7 +15,7 @@ public class PlanetaAssembler implements RepresentationModelAssembler<Planeta, E
   public EntityModel<Planeta> toModel(Planeta entity) {
     return EntityModel.of(
         entity,
-        linkTo(methodOn(PlanetaController.class).one(entity.getNome())).withSelfRel(),
+        linkTo(methodOn(PlanetaController.class).one(entity.getId())).withSelfRel(),
         linkTo(methodOn(PlanetaController.class).all()).withRel("planetas"));
   }
 }

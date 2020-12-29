@@ -21,6 +21,8 @@ public class PlanetaController {
   @Autowired private PlanetaRepository repository;
   @Autowired private PlanetaAssembler assembler;
 
+
+
   @GetMapping("/planetas")
   CollectionModel<EntityModel<Planeta>> all() {
     List<EntityModel<Planeta>> planetas =
@@ -29,7 +31,13 @@ public class PlanetaController {
         planetas, linkTo(methodOn(PlanetaController.class).all()).withSelfRel());
   }
 
-  @GetMapping("/planetas/{nome}")
+  @GetMapping("/planetas/{id}")
+  EntityModel<Planeta> one(@PathVariable Long id) {
+    Planeta planeta = repository.findById(id).orElseThrow(() -> new PlanetaNotFoundException(id));
+    return assembler.toModel(planeta);
+  }
+
+  @GetMapping("/planetas/nome/{nome}")
   EntityModel<Planeta> one(@PathVariable String nome) {
     Planeta planeta = repository.findByNome(nome).orElseThrow(() -> new PlanetaNotFoundException(nome));
     return assembler.toModel(planeta);
@@ -42,18 +50,18 @@ public class PlanetaController {
     Planeta planetaSaved = repository.save(planeta);
     EntityModel<Planeta> entityModel = assembler.toModel(planetaSaved);
     return ResponseEntity.created(
-            linkTo(methodOn(PlanetaController.class).one(planetaSaved.getNome()))
+            linkTo(methodOn(PlanetaController.class).one(planetaSaved.getId()))
                 .withSelfRel()
                 .toUri())
         .body(entityModel);
   }
 
-  @DeleteMapping("/planetas/{nome}")
-  ResponseEntity<?> deletePlaneta(@PathVariable String nome) {
+  @DeleteMapping("/planetas/{id}")
+  ResponseEntity<?> deletePlaneta(@PathVariable Long id) {
     try {
-      repository.deleteByNome(nome);
+      repository.deleteById(id);
     } catch (Exception e) {
-      throw new PlanetaNotFoundException(nome);
+      throw new PlanetaNotFoundException(id);
     }
     return ResponseEntity.noContent().build();
   }
