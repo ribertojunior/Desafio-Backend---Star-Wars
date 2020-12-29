@@ -1,6 +1,6 @@
 package com.example.starwars.utils;
 
-import com.example.starwars.entity.Planeta;
+import com.example.starwars.model.Planeta;
 
 public class Utils {
   public static boolean validaPlaneta(Planeta planeta) {

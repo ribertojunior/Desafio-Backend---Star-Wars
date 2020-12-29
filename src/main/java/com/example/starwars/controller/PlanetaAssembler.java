@@ -1,6 +1,6 @@
 package com.example.starwars.controller;
 
-import com.example.starwars.entity.Planeta;
+import com.example.starwars.model.Planeta;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
@@ -15,7 +15,7 @@ public class PlanetaAssembler implements RepresentationModelAssembler<Planeta, E
   public EntityModel<Planeta> toModel(Planeta entity) {
     return EntityModel.of(
         entity,
-        linkTo(methodOn(PlanetaController.class).one(entity.getId())).withSelfRel(),
+        linkTo(methodOn(PlanetaController.class).one(entity.getNome())).withSelfRel(),
         linkTo(methodOn(PlanetaController.class).all()).withRel("planetas"));
   }
 }
