@@ -1,4 +1,5 @@
-# Desafio-Backend---Star-Wars
+# Desafio-Backend StarWars
 
-Bando de dados: MongoDB
-Collection em resources
+ Bando de dados: MongoDB
+
+Collection postman em resources
