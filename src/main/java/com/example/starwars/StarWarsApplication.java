@@ -28,7 +28,7 @@ public class StarWarsApplication {
 
 
   @Bean
-  public CommandLineRunner run(RestTemplate restTemplate, PlanetaRepository repository) throws Exception {
+  public CommandLineRunner run(RestTemplate restTemplate, PlanetaRepository repository) {
     return args -> {
       if (repository.count() > 0) repository.deleteAll();
       String url = "https://swapi.dev/api/planets/";

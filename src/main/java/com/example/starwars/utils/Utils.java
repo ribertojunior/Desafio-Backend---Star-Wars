@@ -10,14 +10,6 @@ public class Utils {
         && validaString(planeta.getTerreno());
   }
 
-  public static boolean validaString(String... strings) {
-    for (String s : strings) {
-      if (!validaString(s)) {
-        return false;
-      }
-    }
-    return true;
-  }
   private static boolean validaString(String s) {
     return s != null && !s.trim().isEmpty();
   }
