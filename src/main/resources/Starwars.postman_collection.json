@@ -20,12 +20,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/planetas",
-					"protocol": "http",
+					"raw": "https://starwarsribertojunior.herokuapp.com/planetas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"starwarsribertojunior",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"planetas"
 					]
@@ -39,12 +40,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/planetas",
-					"protocol": "http",
+					"raw": "https://starwarsribertojunior.herokuapp.com/planetas",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"starwarsribertojunior",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"planetas"
 					]
@@ -58,12 +60,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/planetas/nome/coiso",
-					"protocol": "http",
+					"raw": "https://starwarsribertojunior.herokuapp.com/planetas/nome/coiso",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"starwarsribertojunior",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"planetas",
 						"nome",
@@ -79,15 +82,16 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/planetas/100",
-					"protocol": "http",
+					"raw": "https://starwarsribertojunior.herokuapp.com/planetas/123",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"starwarsribertojunior",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"planetas",
-						"100"
+						"123"
 					]
 				}
 			},
@@ -99,15 +103,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/planetas/122",
-					"protocol": "http",
+					"raw": "https://starwarsribertojunior.herokuapp.com/planetas/183",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"starwarsribertojunior",
+						"herokuapp",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"planetas",
-						"122"
+						"183"
 					]
 				}
 			},
