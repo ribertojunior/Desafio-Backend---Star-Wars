@@ -21,4 +21,5 @@ public class Planeta {
   @NonNull private String nome;
   @NonNull private String clima;
   @NonNull private String terreno;
+  private int numApp;
 }
